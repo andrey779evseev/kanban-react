@@ -13,7 +13,7 @@ export default function Header() {
 	return (
 		<>
 			{/* first section */}
-			<div className='flex items-center justify-between border-b border-r border-gray-300 py-8 pl-[22px] pr-[25px]'>
+			<header className='flex items-center justify-between border-b border-r border-gray-300 py-8 pl-[22px] pr-[25px]'>
 				<div className='flex items-center gap-2'>
 					<Colorfilter size='24' color='#5030e5' variant='Bulk' />
 					<span className='text-xl font-bold text-dark'>Project M.</span>
@@ -32,10 +32,10 @@ export default function Header() {
 						className='absolute right-[6px]'
 					/>
 				</div>
-			</div>
+			</header>
 
 			{/* second section */}
-			<div className='flex items-center justify-between border-b border-gray-300 px-12 py-[22px]'>
+			<header className='flex items-center justify-between border-b border-gray-300 px-12 py-[22px]'>
 				<SearchInput/>
 				<div className='flex items-center'>
 					<div className='mr-[50px] flex gap-6'>
@@ -59,7 +59,7 @@ export default function Header() {
 						<ArrowDown2 size='18' color='#292D32' />
 					</div>
 				</div>
-			</div>
+			</header>
 		</>
 	)
 }
