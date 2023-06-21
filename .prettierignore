@@ -1,0 +1,7 @@
+/public
+/.vscode
+/node_modules
+.gitignore
+pnpm-lock.yaml
+.eslintignore
+bun.lockb
