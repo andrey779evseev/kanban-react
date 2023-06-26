@@ -1,6 +1,7 @@
+import { AddSquare } from 'iconsax-react'
+import MoreIcon from '@components/icons/MoreIcon'
 import If from '@components/If'
 import { cn } from '@utils/cn'
-import { AddSquare, More } from 'iconsax-react'
 
 const projects = [
 	{
@@ -61,7 +62,7 @@ export default function SidebarProjects() {
 									</span>
 								</div>
 								<If condition={i === 0}>
-									<More size='16' color='#787486' />
+									<MoreIcon size='16' color='#0D062D' />
 								</If>
 							</a>
 						</li>

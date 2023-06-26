@@ -4,11 +4,12 @@ export default {
 	theme: {
 		extend: {
 			fontSize: {
+				xs: ['12px', '15px'],
 				sm: ['14px', '17px'],
 				base: ['16px', '19px'],
+				lg: ['18px', '22px'],
 				xl: ['20px', '24px'],
-				xs: ['12px', '15px']
-			}
+			},
 		},
 		colors: {
 			black: '#000',
@@ -18,20 +19,31 @@ export default {
 			gray: {
 				200: '#F5F5F5',
 				300: '#DBDBDB',
-				700: '#787486'
+				400: '#E0E0E0',
+				700: '#787486',
+				800: '#625F6D',
 			},
 			red: {
 				100: '#F4D7DA',
 				500: '#D8727D',
-				600: '#D25B68'
+				600: '#D25B68',
+			},
+			green: {
+				300: '#8BC48A',
+				400: '#83C29D',
+				500: '#68B266',
 			},
 			violet: '#5030E5',
 			pink: '#E4CCFD',
 			lime: '#7AC555',
-			orange: '#FFA500',
+			orange: {
+				DEFAULT: '#FFA500',
+				300: '#DFA874',
+				500: '#D58D49',
+			},
 			blue: '#76A5EA',
-			yellow: '#FCD64A'
-		}
+			yellow: '#FCD64A',
+		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/container-queries')],
 }

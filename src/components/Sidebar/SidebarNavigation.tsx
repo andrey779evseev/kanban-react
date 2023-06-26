@@ -1,4 +1,10 @@
-import { Category, Message, TaskSquare, Profile2User, Setting2 } from 'iconsax-react'
+import {
+	Category,
+	Message,
+	Profile2User,
+	Setting2,
+	TaskSquare,
+} from 'iconsax-react'
 
 const links = [
 	{ icon: <Category color='#787486' />, title: 'Home', href: '/' },

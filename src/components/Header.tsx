@@ -1,13 +1,13 @@
-import avatar1 from '@assets/images/avatar1.png'
-import SearchInput from '@components/SearchInput'
 import {
 	ArrowDown2,
 	ArrowLeft2,
 	Calendar2,
 	Colorfilter,
 	MessageQuestion,
-	Notification
+	Notification,
 } from 'iconsax-react'
+import avatar1 from '@assets/images/avatar1.png'
+import SearchInput from '@components/SearchInput'
 
 export default function Header() {
 	return (
@@ -36,7 +36,7 @@ export default function Header() {
 
 			{/* second section */}
 			<header className='flex items-center justify-between border-b border-gray-300 px-12 py-[22px]'>
-				<SearchInput/>
+				<SearchInput />
 				<div className='flex items-center'>
 					<div className='mr-[50px] flex gap-6'>
 						<Calendar2 size='24' color='#787486' />
