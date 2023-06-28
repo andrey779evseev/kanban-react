@@ -1,23 +1,27 @@
+import { useDroppable } from '@dnd-kit/core'
 import { Add } from 'iconsax-react'
 import { PropsWithChildren } from 'react'
-import { cn } from '@utils/cn'
+import { cn } from '@/utils/cn'
 
 type PropsType = PropsWithChildren<{
 	title: string
-	color: 'violet' | 'orange' | 'green'
+	type: 'todo' | 'inprogress' | 'completed'
 }>
 
 export default function DashboardColumn(props: PropsType) {
-	const { title, color, children } = props
+	const { title, children, type } = props
+	const { setNodeRef } = useDroppable({
+		id: `column-${type}`,
+	})
 	return (
 		<div className='flex h-full flex-col gap-5 rounded-2xl bg-gray-200 p-5'>
 			<div className='flex justify-between'>
 				<div className='flex items-center'>
 					<div
 						className={cn('mr-2 h-[8px] w-[8px] rounded-full', {
-							'bg-violet': color === 'violet',
-							'bg-orange': color === 'orange',
-							'bg-green-300': color === 'green',
+							'bg-violet': type === 'todo',
+							'bg-orange': type === 'inprogress',
+							'bg-green-300': type === 'completed',
 						})}
 					/>
 					<span className='mr-3 text-base font-medium text-dark'>{title}</span>
@@ -27,17 +31,17 @@ export default function DashboardColumn(props: PropsType) {
 				</div>
 				<button
 					className={cn('grid h-5 w-5 place-items-center rounded-md', {
-						'bg-violet/20': color === 'violet',
-						'bg-orange/20': color === 'violet',
-						'bg-green-300/20': color === 'violet',
+						'bg-violet/20': type === 'todo',
+						'bg-orange/20': type === 'inprogress',
+						'bg-green-300/20': type === 'completed',
 					})}
 				>
 					<Add
 						size='18'
 						color={
-							color === 'violet'
+							type === 'todo'
 								? '#5030e5'
-								: color === 'orange'
+								: type === 'inprogress'
 								? '#FFA500'
 								: '#8BC48A'
 						}
@@ -46,12 +50,14 @@ export default function DashboardColumn(props: PropsType) {
 			</div>
 			<div
 				className={cn('h-[3px] w-full', {
-					'bg-violet': color === 'violet',
-					'bg-orange': color === 'orange',
-					'bg-green-300': color === 'green',
+					'bg-violet': type === 'todo',
+					'bg-orange': type === 'inprogress',
+					'bg-green-300': type === 'completed',
 				})}
 			/>
-			{children}
+			<div className='flex flex-col gap-5' ref={setNodeRef}>
+				{children}
+			</div>
 		</div>
 	)
 }

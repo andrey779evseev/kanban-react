@@ -9,7 +9,7 @@ import {
 	Pause,
 	Profile2User,
 } from 'iconsax-react'
-import AvatarsGroup from '@components/AvatarsGroup'
+import AvatarsGroup from '@/components/AvatarsGroup'
 
 export default function DashboardHead() {
 	return (

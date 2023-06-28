@@ -1,5 +1,5 @@
-import { capitalizeFirstLetter } from '@utils/capitalizeFirstLetter'
-import { cn } from '@utils/cn'
+import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	type: 'low' | 'high' | 'completed'

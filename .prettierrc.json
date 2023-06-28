@@ -13,9 +13,10 @@
 	"importOrder": [
 		"^react/(.*)$",
 		"^clsx/(.*)$",
-		"^@assets/(.*)$",
-		"^@components/(.*)$",
-		"^@utils/(.*)$",
+		"^@/assets/(.*)$",
+		"^@/components/(.*)$",
+		"^@/utils/(.*)$",
+		"^@/types/(.*)$",
 		"^[./]"
 	],
 	"importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],

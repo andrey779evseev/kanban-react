@@ -1,22 +1,21 @@
-import { PropsWithChildren, useMemo } from 'react'
-import avatar2 from '@assets/images/avatar2.png'
-import avatar3 from '@assets/images/avatar3.png'
-import avatar4 from '@assets/images/avatar4.png'
-import avatar5 from '@assets/images/avatar5.png'
-import { cn } from '@utils/cn'
-import { getRandomInt } from '@utils/getRandomInt'
+import { PropsWithChildren } from 'react'
+import avatar2 from '@/assets/images/avatar2.png'
+import avatar3 from '@/assets/images/avatar3.png'
+import avatar4 from '@/assets/images/avatar4.png'
+import avatar5 from '@/assets/images/avatar5.png'
+import { cn } from '@/utils/cn'
 
 type PropsType = PropsWithChildren<{
 	size: 'big' | 'small'
 	direction: 'left' | 'right'
 }>
 
-const avatarsBase = [avatar2, avatar3, avatar4, avatar5]
+const avatars = [avatar2, avatar3, avatar4, avatar5]
 
 /// children is an extra element in a row
 export default function AvatarsGroup(props: PropsType) {
 	const { size, direction, children } = props
-	const avatars = useMemo(() => avatarsBase.slice(0, getRandomInt(1, 4)), [])
+
 	return (
 		<div className='flex'>
 			{avatars.map((avatar, i) => (

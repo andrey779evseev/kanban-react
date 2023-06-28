@@ -8,9 +8,10 @@ export default defineConfig({
 	base: '/', //todo, url to hosted app
 	resolve: {
 		alias: {
-			'@assets': resolve(__dirname, './src/assets'),
-			'@components': resolve(__dirname, './src/components'),
-			'@utils': resolve(__dirname, './src/utils'),
+			'@/assets': resolve(__dirname, './src/assets'),
+			'@/components': resolve(__dirname, './src/components'),
+			'@/utils': resolve(__dirname, './src/utils'),
+			'@/types': resolve(__dirname, './src/types'),
 		},
 	},
 })

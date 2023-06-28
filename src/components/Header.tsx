@@ -6,8 +6,8 @@ import {
 	MessageQuestion,
 	Notification,
 } from 'iconsax-react'
-import avatar1 from '@assets/images/avatar1.png'
-import SearchInput from '@components/SearchInput'
+import avatar1 from '@/assets/images/avatar1.png'
+import SearchInput from '@/components/SearchInput'
 
 export default function Header() {
 	return (

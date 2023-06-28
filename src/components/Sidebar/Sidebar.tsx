@@ -1,6 +1,6 @@
-import SidebarNavigation from '@components/sidebar/SidebarNavigation'
-import SidebarNotice from '@components/sidebar/SidebarNotice'
-import SidebarProjects from '@components/sidebar/SidebarProjects'
+import SidebarNavigation from '@/components/sidebar/SidebarNavigation'
+import SidebarNotice from '@/components/sidebar/SidebarNotice'
+import SidebarProjects from '@/components/sidebar/SidebarProjects'
 
 export default function Sidebar() {
 	return (

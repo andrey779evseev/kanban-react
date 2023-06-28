@@ -1,7 +1,7 @@
 import { AddSquare } from 'iconsax-react'
-import MoreIcon from '@components/icons/MoreIcon'
-import If from '@components/If'
-import { cn } from '@utils/cn'
+import MoreIcon from '@/components/icons/MoreIcon'
+import If from '@/components/If'
+import { cn } from '@/utils/cn'
 
 const projects = [
 	{
